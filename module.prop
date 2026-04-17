@@ -1,0 +1,6 @@
+id=docker-chroot-selinux
+name=Docker Chroot SELinux + Mount
+version=v1.0
+versionCode=1
+author=AlexDev404
+description=Persists SELinux policy patches and RW ext4 loop mount for Docker storage inside Alpine chroot-distro. Patches: kernel→system_data_file read/write/open/getattr, system_data_file→system_data_file filesystem associate. Mounts docker-storage.img at /data/local/chroot-distro/alpine/var/lib/docker with context= and --make-shared propagation.

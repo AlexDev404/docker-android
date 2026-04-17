@@ -1,0 +1,5 @@
+# Allow kernel loop device thread to read/write the ext4 backing image
+allow kernel system_data_file file { read write open getattr }
+
+# Allow context= mounts to associate inodes with the forced label
+allow system_data_file system_data_file filesystem { associate }
