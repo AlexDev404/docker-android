@@ -4,7 +4,7 @@ Docker for android using `chroot-distro` and `pivot_root`
 # Step 0 - Install alpine and pivot_root into it
 ```powershell
 chroot-distro install alpine
-./pivot_root.sh
+./pivot_alpine.sh
 ```
 
 # Step 1 - Install docker (v24 matters here)
