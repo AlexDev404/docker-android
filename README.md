@@ -7,7 +7,19 @@ chroot-distro install alpine
 ./pivot_alpine.sh
 ```
 
-# Step 1 - Install docker (v24 matters here)
+# Step 1 - Create the docker storage and format it
+```powershell
+dd if=/dev/zero of=/docker-storage.img bs=1M count=10240
+mkfs.ext4 /docker-storage.img
+apk add mkfs.ext4
+apk add e2fsprogs
+mkfs.ext4 /docker-storage.img
+mkdir -p /var/lib/docker
+```
+
+# Step 1.1 - Install the magisk module (this repository) and install it from magisk
+
+# Step 1.2 - Install docker (v24 matters here)
 ```powershell
 wget https://download.docker.com/linux/static/stable/aarch64/docker-24.0.9.tgz
 tar -xzf docker-24.0.9.tgz
