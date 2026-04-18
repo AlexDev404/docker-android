@@ -26,6 +26,11 @@ tar -xzf docker-24.0.9.tgz
 mv docker/* /usr/local/bin/
 rm -rf docker docker-24.0.9.tgz
 ```
+# Step 1.3 - Install iptables-legacy
+```powershell
+apk add iptables-legacy
+## Then symlink /bin/iptables to /bin/iptables-legacy
+```
 
 # Step 2 - Add `crun` and test
 ```powershell
