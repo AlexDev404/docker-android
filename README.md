@@ -30,6 +30,9 @@ rm -rf docker docker-24.0.9.tgz
 ```powershell
 apk add iptables-legacy
 ## Then symlink /bin/iptables to /bin/iptables-legacy
+rm -f /usr/sbin/iptables
+ln -sf /usr/sbin/iptables-legacy /usr/sbin/iptables
+ln -sf /usr/sbin/ip6tables-legacy /usr/sbin/ip6tables
 ```
 
 # Step 2 - Add `crun` and test
